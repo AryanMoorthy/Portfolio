@@ -164,6 +164,7 @@ aside img{
     width : 100%;
     height : 95%;
     border : 4px solid cyan;
+    border-radius: 15px;
 }
 .projects img:hover{
     transform : scale(1.05);
@@ -176,6 +177,7 @@ aside img{
     width : 100%;
     height : 100%;
     aspect-ratio: 4/2;
+    border-radius: 15px;
 }
 .projects iframe:hover{
     transform : scale(1.05);

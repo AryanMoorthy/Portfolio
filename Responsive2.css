@@ -171,6 +171,7 @@ aside img{
     margin : 20px 0px;
     display : block;
     width : 100%;
+    border-radius: 15px;
 }
 .projects img:hover{
     transform : scale(1.05);
@@ -189,6 +190,7 @@ aside img{
     transform : scale(1.05);
     transition : all 0.5s ease-in-out;
     cursor : pointer;
+    border-radius: 15px;
 }
 .BG3{
     /* background-image: url("https://www.shutterstock.com/image-illustration/telephone-envelope-letter-email-symbols-600nw-1784113403.jpg"); */
