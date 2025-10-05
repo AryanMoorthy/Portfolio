@@ -165,7 +165,7 @@ aside img{
 }
 .projects img:hover{
     transform : scale(1.1);
-    transition : all 0.3s ease-in-out;
+    transition : all 0.5s ease-in-out;
     cursor : pointer;
 }
 .projects iframe
@@ -177,7 +177,7 @@ aside img{
 }
 .projects iframe:hover{
     transform : scale(1.1);
-    transition : all 0.3s ease-in-out;
+    transition : all 0.5s ease-in-out;
     cursor : pointer;
 }
 .BG3{
