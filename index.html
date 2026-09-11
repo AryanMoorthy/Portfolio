@@ -4,162 +4,678 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Responsive1.css">
-    <link rel="stylesheet" href="Responsive2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Portfolio of Aryan Moorthy - CS & AI Student @ Scaler School of Technology & BITS Pilani. Competitive Programmer with 900+ problems solved across Codeforces, CodeChef, and AtCoder.">
+    <meta name="author" content="Aryan Moorthy">
+    <meta property="og:title" content="Aryan Moorthy | Competitive Programmer & CS Student">
+    <meta property="og:description" content="Explore CP ratings, statistics, skills, and academic journey of Aryan Moorthy (Codeforces 1180, CodeChef 2★, AtCoder 7 Kyu).">
+    <meta property="og:type" content="website">
+    <title>Aryan Moorthy | Competitive Programmer & CS Student</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <!-- Subtle Background Grid Overlay -->
+    <div class="bg-grid-overlay"></div>
+
+    <!-- Header & Navigation Bar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="brand-logo" id="brandLogo">
+                <span class="logo-mark">AM</span>
+                <span class="logo-text">Aryan<span class="text-gradient">.dev</span></span>
+            </a>
+
             <nav>
-                <a href="#home">Home</a>
-                <a href="#aboutMe">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contactMe">Contact</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#cp" class="nav-link">CP Profiles</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Journey</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
             </nav>
-        </header>
-        <main>
-            <div class="BG1">
-                <div class="home" id="home">
-                    <h1>Aryan Moorthy</h1>
-                    <section>
-                        <p>CS & AI Student @Scaler School of Technology’29 | BITS Pilani’29 | Outlier | Student Mentor
-                            @BeingIITian | From Learning to Leading</p>
-                        <a href="#projects"><button>View my work</button></a>
-                    </section>
+
+            <div class="nav-actions">
+                <a href="assets/docs/Resume.pdf" target="_blank" class="btn btn-outline-gold btn-sm" title="View Resume PDF">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for Collaborations & Opportunities
+                    </div>
+                    <span class="hero-greeting">Hi there, I'm</span>
+                    <h1 class="hero-name">Aryan <span class="text-gradient">Moorthy</span></h1>
+                    
+                    <div class="hero-role-wrapper">
+                        <span id="typed-text" class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+
+                    <p class="hero-desc">
+                        CS & AI Undergrad at <strong>Scaler School of Technology ’29</strong> & <strong>BITS Pilani ’29</strong>. 
+                        Competitive programmer with <strong>900+ problems solved</strong>, ICPC Regionals Cohort member at <strong>NlogN CP Club</strong>, and builder of algorithmic solutions.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#cp" class="btn btn-primary">
+                            <i class="fas fa-code"></i> CP Ratings & Stats
+                        </a>
+                        <a href="assets/docs/Resume.pdf" target="_blank" class="btn btn-outline-gold">
+                            <i class="fas fa-download"></i> Resume PDF
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="hero-social-label">Find Me On:</span>
+                        <a href="https://codeforces.com/profile/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="social-chip codeforces" title="Codeforces Profile">
+                            <i class="fas fa-chart-line"></i> CF: <span id="hero-cf-rating">1180</span>
+                        </a>
+                        <a href="https://www.codechef.com/users/aryan_moorthy" target="_blank" rel="noopener noreferrer" class="social-chip codechef" title="CodeChef Profile">
+                            <i class="fas fa-star"></i> CC: <span id="hero-cc-stars">2★</span> (<span id="hero-cc-rating">1415</span>)
+                        </a>
+                        <a href="https://atcoder.jp/users/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="social-chip atcoder" title="AtCoder Profile">
+                            <i class="fas fa-trophy"></i> AC: <span id="hero-ac-kyu">7 Kyu</span>
+                        </a>
+                        <a href="https://github.com/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aryan-m-7907201b7/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:aryanxmoorthy@gmail.com" class="btn-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="aboutMe" id="aboutMe">
-                    <h2>About Me</h2>
-                    <section>
-                        <aside>
-                            <img src="pp.png" alt="">
-                        </aside>
-                        <p>Hi! I’m Aryan Moorthy, a passionate learner with interests in competitive programming and
-                            front-end development, working with HTML, CSS, and JavaScript to create interactive web
-                            experiences. I enjoy solving coding challenges and exploring new algorithms. Outside of
-                            programming, I love playing badminton and chess, which keep my mind sharp and strategic. I’m
-                            also drawn to teaching and creating educational content, blending curiosity, empathy, and a
-                            dash of humor in everything I do.</p>
-                    </section>
-                    <div class="skills">
-                        <h3>My skills</h3>
-                        <span>As per lectures covered in class</span>
-                        <h4>HTML</h4>
-                        <div class="progressBar">
-                            <div class="html"><span>80%</span></div>
+
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <img src="assets/images/pp.png" alt="Aryan Moorthy Portrait" class="avatar-img">
+                    </div>
+                    <div class="floating-badge badge-top">
+                        <i class="fas fa-bolt"></i>
+                        <span>900+ Solved | 200d Streak</span>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SST & BITS Pilani '29</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitive Programming Showcase Section -->
+        <section class="section" id="cp">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-terminal"></i> Competitive Programming</span>
+                    <h2 class="section-title">Algorithmic Prowess & <span class="text-gradient">Contest Ratings</span></h2>
+                    <p class="section-subtitle">Consistent problem solver across global competitive programming platforms with 900+ solved problems and continuous active streaks.</p>
+                </div>
+
+                <div class="cp-stats-grid">
+                    <!-- Codeforces Card -->
+                    <div class="cp-card card-codeforces">
+                        <div class="cp-header">
+                            <div class="cp-platform-info">
+                                <div class="cp-icon icon-cf">CF</div>
+                                <div>
+                                    <h3 class="cp-name">Codeforces</h3>
+                                    <a href="https://codeforces.com/profile/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="cp-handle-link">
+                                        @AryanMoorthy <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="cp-badge-highlight" id="cf-rank">Pupil</span>
                         </div>
-                        <h4>CSS</h4>
-                        <div class="progressBar">
-                            <div class="css"><span>70%</span></div>
+
+                        <div class="cp-stats-list">
+                            <div class="cp-stat-item">
+                                <span class="label">Current Rating</span>
+                                <span class="value" id="cf-rating">1180</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Max Rating</span>
+                                <span class="value" id="cf-max-rating">1180</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Problems Solved</span>
+                                <span class="value font-mono" id="cf-solved">900+ Solved</span>
+                            </div>
                         </div>
-                        <h4>Javascript</h4>
-                        <div class="progressBar">
-                            <div class="js"><span>5%</span></div>
+
+                        <div class="cp-streak-banner">
+                            <i class="fas fa-fire"></i>
+                            <span id="cf-streak">Longest Streak: 200 Consecutive Days</span>
                         </div>
-                        <h4>Java</h4>
-                        <div class="progressBar">
-                            <div class="java"><span>60%</span></div>
+                    </div>
+
+                    <!-- CodeChef Card -->
+                    <div class="cp-card card-codechef">
+                        <div class="cp-header">
+                            <div class="cp-platform-info">
+                                <div class="cp-icon icon-cc">CC</div>
+                                <div>
+                                    <h3 class="cp-name">CodeChef</h3>
+                                    <a href="https://www.codechef.com/users/aryan_moorthy" target="_blank" rel="noopener noreferrer" class="cp-handle-link">
+                                        @aryan_moorthy <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="cp-badge-highlight" id="cc-stars">2 ★★</span>
                         </div>
-                        <h4>C++</h4>
-                        <div class="progressBar">
-                            <div class="cpp"><span>40%</span></div>
+
+                        <div class="cp-stats-list">
+                            <div class="cp-stat-item">
+                                <span class="label">Current Rating</span>
+                                <span class="value" id="cc-rating">1415</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Highest Rating</span>
+                                <span class="value" id="cc-max-rating">1511</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Rated Contests</span>
+                                <span class="value font-mono" id="cc-contests">8 Contests</span>
+                            </div>
+                        </div>
+
+                        <div class="cp-streak-banner">
+                            <i class="fas fa-medal"></i>
+                            <span id="cc-streak">Division 3 Competitor (Peak 1511)</span>
+                        </div>
+                    </div>
+
+                    <!-- AtCoder Card -->
+                    <div class="cp-card card-atcoder">
+                        <div class="cp-header">
+                            <div class="cp-platform-info">
+                                <div class="cp-icon icon-ac">AC</div>
+                                <div>
+                                    <h3 class="cp-name">AtCoder</h3>
+                                    <a href="https://atcoder.jp/users/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="cp-handle-link">
+                                        @AryanMoorthy <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="cp-badge-highlight" id="ac-kyu">7 Kyu</span>
+                        </div>
+
+                        <div class="cp-stats-list">
+                            <div class="cp-stat-item">
+                                <span class="label">Current Rating</span>
+                                <span class="value" id="ac-rating">669</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Rank Tier</span>
+                                <span class="value" id="ac-tier">7 Kyu (Brown)</span>
+                            </div>
+                            <div class="cp-stat-item">
+                                <span class="label">Contests Participated</span>
+                                <span class="value font-mono" id="ac-contests">—</span>
+                            </div>
+                        </div>
+
+                        <div class="cp-streak-banner">
+                            <i class="fas fa-globe"></i>
+                            <span id="ac-streak">Top 23.82% Worldwide Ranking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== ACTIVITY HEATMAP ===================== -->
+                <div class="heatmap-section">
+                    <div class="heatmap-header">
+                        <div class="heatmap-title-block">
+                            <h3><i class="fas fa-calendar-check"></i> Coding Activity Heatmap</h3>
+                            <p id="heatmap-subtitle" class="heatmap-subtitle">
+                                Combined daily solves from Codeforces &amp; AtCoder &mdash; last 52 weeks
+                            </p>
+                        </div>
+                        <div class="heatmap-meta">
+                            <span class="heatmap-total-badge" id="heatmap-total"></span>
+                            <div class="heatmap-legend">
+                                <span>Less</span>
+                                <div class="legend-cell l0"></div>
+                                <div class="legend-cell l1"></div>
+                                <div class="legend-cell l2"></div>
+                                <div class="legend-cell l3"></div>
+                                <div class="legend-cell l4"></div>
+                                <span>More</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="heatmap-scroll-wrapper">
+                        <div class="heatmap-month-row" id="heatmap-months"></div>
+                        <div class="heatmap-body">
+                            <div class="heatmap-day-labels">
+                                <span>Mon</span>
+                                <span>Wed</span>
+                                <span>Fri</span>
+                            </div>
+                            <div class="heatmap-grid" id="heatmap-grid">
+                                <div class="heatmap-loading" id="heatmap-loading">
+                                    <i class="fas fa-spinner fa-spin"></i> Loading activity&hellip;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="heatmap-cache-note" id="heatmap-cache-note"></p>
+                </div>
+                <!-- ============================================================ -->
+
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                    <h2 class="section-title">Driven by Logic, Curiosity & <span class="text-gradient">Continuous Growth</span></h2>
+                    <p class="section-subtitle">A glimpse into who I am, what drives my problem-solving mindset, and what keeps me sharp.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3><i class="fas fa-terminal"></i> My Story & Engineering Mindset</h3>
+                        <p>
+                            I’m Aryan Moorthy, an undergraduate pursuing a dual degree in <strong>Computer Science & Artificial Intelligence</strong> at <strong>Scaler School of Technology</strong> and <strong>BITS Pilani</strong>.
+                        </p>
+                        <p>
+                            My primary passion lies in <strong>Competitive Programming</strong> and <strong>Data Structures & Algorithms</strong>. Having solved over 900+ algorithmic problems across Codeforces, CodeChef, and AtCoder with a continuous 200-day streak, I bring rigorous discipline, analytical depth, and structured problem decomposition to every technical challenge.
+                        </p>
+                        <p>
+                            Outside of software engineering and coding contests, I enjoy playing <strong>chess</strong> and <strong>badminton</strong>—disciplines that hone strategic patience, tactical agility, and rapid decision-making under time constraints.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3><i class="fas fa-sparkles"></i> Core Pillars</h3>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap highlight-icon"></i>
+                                <span class="highlight-title">Dual Degree</span>
+                                <span class="highlight-desc">Scaler School of Tech & BITS Pilani ’29</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-trophy highlight-icon"></i>
+                                <span class="highlight-title">ICPC Regionals Cohort</span>
+                                <span class="highlight-desc">Top-tier competitive cohort @ NlogN Club</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-brain highlight-icon"></i>
+                                <span class="highlight-title">900+ Problems Solved</span>
+                                <span class="highlight-desc">200-day streak across CF, CC & AtCoder</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chess-knight highlight-icon"></i>
+                                <span class="highlight-title">Strategy Enthusiast</span>
+                                <span class="highlight-desc">Chess & Badminton player</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="BG2" id="projects">
-                <h2>My Projects</h2>
-                <p>Click on the hyperlink to view the code</p>
-                <div class="projects">
-                    <a href="https://github.com/AryanMoorthy/Assignments/blob/main/Recipee.html">
-                        <img src="Recipee.png" alt="" id="recipe" title="Click to view code">
-                        <h3>Recipe</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/blob/main/Grids_Assignment.html">
-                        <img src="grids.png" alt="" id="grids" title="Click to view code">
-                        <h3>Grids</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Flight-Tracker">
-                    <iframe src="https://www.youtube.com/embed/6H1QUuNJw6o"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="OSC">
-                    </iframe>
-                    <h3>Flight Tracker</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/tree/main/FerrisWheel">
-                    <iframe src="https://www.youtube.com/embed/KjHvH28uvl0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="ferrisWheel">
-                    </iframe>
-                    <h3>Ferris Wheel</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/blob/main/DogGallery.html">
-                        <iframe src="https://www.youtube.com/embed/j_7uLaDOM4I"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="dogGallery">
-                        </iframe>
-                        <h3>Dog Gallery</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/blob/main/MoonOrbit.html">
-                        <iframe src="https://www.youtube.com/embed/cYDYpmJR_-U"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="moonEarth">
-                    </iframe>
-                    <h3>Moon orbitting the Earth</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/blob/main/Profile_Card.html">
-                    <iframe src="https://www.youtube.com/embed/0A9fPYgE_G0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="profileCard">
-                    </iframe>
-                    <h3>Profile Card</h3>
-                    </a>
-                    <a href="https://github.com/AryanMoorthy/Assignments/tree/main/Shapes">
-                    <iframe src="https://www.youtube.com/embed/vKw1FLHRbvY"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen id="shapes">
-                    </iframe>
-                    <h3>Shapes</h3>
-                    </a>
+        </section>
+
+        <!-- Experience & Education Journey Section -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-route"></i> My Journey</span>
+                    <h2 class="section-title">Education & <span class="text-gradient">Club Experience</span></h2>
+                    <p class="section-subtitle">Academic foundations and competitive programming milestones.</p>
                 </div>
-            </div>
-            <div class="BG3">
-                <div class="contactMe" id="contactMe">
-                    <h2>Contact Me</h2>
-                    <span>Please fill this form to collaborate</span>
-                    <form action="https://formspree.io/f/xnngvpbe" method="POST">
-                        <input type="text" placeholder="Name" name="name" required>
-                        <input type="email" placeholder="Email" name="email" required>
-                        <textarea name="message" id="" rows="5" placeholder="Your message here..." required></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                    <div class="links">
-                        <a href="https://www.linkedin.com/in/aryan-m-7907201b7/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AryanMoorthy"><i class="fab fa-github"></i></a>
-                        <a href="mailto:aryanxmoorthy@gmail.com"><i class="fas fa-envelope"></i></a>
+
+                <div class="timeline">
+                    <!-- CP Club Milestones -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="timeline-role">NlogN — The CP Club, Scaler School of Technology</h3>
+                                <span class="timeline-period">Nov 2025 — Present</span>
+                            </div>
+                            <div class="timeline-org">
+                                <i class="fas fa-trophy"></i> Bengaluru | Competitive Programming Club
+                            </div>
+                            <ul class="timeline-list">
+                                <li><strong>ICPC Regionals Cohort (Jul 2026 – Present):</strong> Selected into the club's top-tier cohort undergoing rigorous preparation for ICPC Regionals.</li>
+                                <li><strong>Super 25 (May 2026 – Jul 2026):</strong> Advanced into the exclusive 25-member cohort of top-performing competitive programmers based on contest performance.</li>
+                                <li><strong>Rising 40 (Nov 2025 – May 2026):</strong> Selected among 40 members based on consistent problem-solving output and algorithmic benchmarks.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Scaler School of Technology -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="timeline-role">Undergraduate Program in Computer Science & AI</h3>
+                                <span class="timeline-period">2025 — 2029</span>
+                            </div>
+                            <div class="timeline-org">
+                                <i class="fas fa-university"></i> Scaler School of Technology (SST)
+                            </div>
+                            <p class="timeline-desc">
+                                Rigorous, industry-first curriculum focused on Data Structures, Algorithms, Software Engineering, System Design, and Artificial Intelligence taught by top industry veterans.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BITS Pilani -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-meta">
+                                <h3 class="timeline-role">BSc (Honours) in Computer Science</h3>
+                                <span class="timeline-period">2025 — 2029</span>
+                            </div>
+                            <div class="timeline-org">
+                                <i class="fas fa-graduation-cap"></i> BITS Pilani (Digital)
+                            </div>
+                            <p class="timeline-desc">
+                                Dual degree curriculum providing solid mathematical foundations, computational theory, operating systems, and discrete mathematics.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="footer">© AryanMoorthy</div>
-                    <div class="links">
-                        <a href="https://www.linkedin.com/in/aryan-m-7907201b7/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AryanMoorthy"><i class="fab fa-github"></i></a>
-                        <a href="mailto:aryanxmoorthy@gmail.com"><i class="fas fa-envelope"></i></a>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-tools"></i> Technical Arsenal</span>
+                    <h2 class="section-title">Skills & <span class="text-gradient">Proficiencies</span></h2>
+                    <p class="section-subtitle">Technical stack, frameworks, and core computational competencies from my resume.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Card 1: Programming Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <div class="skill-item-info">
+                                    <span>C++ (Competitive Programming)</span>
+                                    <span class="level-tag">Advanced</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-level="90%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-info">
+                                    <span>Java (OOP & DSA)</span>
+                                    <span class="level-tag">Advanced</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-level="85%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-info">
+                                    <span>Python</span>
+                                    <span class="level-tag">Proficient</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-level="80%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-info">
+                                    <span>JavaScript (ES6+)</span>
+                                    <span class="level-tag">Proficient</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-level="75%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-info">
+                                    <span>HTML5 & CSS3</span>
+                                    <span class="level-tag">Advanced</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" data-level="90%" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-        </footer>
-    </div>
+
+                    <!-- Card 2: Frameworks & Web Tools -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Frameworks & Libraries</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+                            <span class="skill-tag"><i class="fas fa-network-wired"></i> Axios</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="skill-tag"><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                            <span class="skill-tag"><i class="fas fa-cloud"></i> REST APIs</span>
+                            <span class="skill-tag"><i class="fas fa-memory"></i> localStorage API</span>
+                            <span class="skill-tag"><i class="fas fa-paste"></i> Clipboard API</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Developer Tools -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-wrench"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</span>
+                            <span class="skill-tag"><i class="fas fa-terminal"></i> Linux CLI</span>
+                            <span class="skill-tag"><i class="fas fa-code-branch"></i> Git Workflow</span>
+                            <span class="skill-tag"><i class="fas fa-paper-plane"></i> Formspree</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Core Competencies -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Core Competencies</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><i class="fas fa-project-diagram"></i> Data Structures & Algorithms</span>
+                            <span class="skill-tag"><i class="fas fa-trophy"></i> Competitive Programming</span>
+                            <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                            <span class="skill-tag"><i class="fas fa-sitemap"></i> Object-Oriented Programming</span>
+                            <span class="skill-tag"><i class="fas fa-chess"></i> Strategic & Tactical Thinking</span>
+                            <span class="skill-tag"><i class="fas fa-code"></i> Algorithm Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+                    <h2 class="section-title">Let's Connect & <span class="text-gradient">Collaborate</span></h2>
+                    <p class="section-subtitle">Have an opportunity, algorithmic discussion, or project idea? Reach out anytime!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3><i class="fas fa-comments"></i> Get In Touch</h3>
+                            <p>
+                                Always interested in discussing competitive programming, algorithm optimization, software engineering, and collaborative projects.
+                            </p>
+
+                            <div class="contact-methods">
+                                <a href="mailto:aryanxmoorthy@gmail.com" class="contact-method-item">
+                                    <div class="contact-method-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-method-text">
+                                        <span class="label">Direct Email</span>
+                                        <span class="value">aryanxmoorthy@gmail.com</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/aryan-m-7907201b7/" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                                    <div class="contact-method-icon">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                    <div class="contact-method-text">
+                                        <span class="label">LinkedIn</span>
+                                        <span class="value">Aryan Moorthy</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://github.com/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                                    <div class="contact-method-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-method-text">
+                                        <span class="label">GitHub</span>
+                                        <span class="value">@AryanMoorthy</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://codeforces.com/profile/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+                                    <div class="contact-method-icon" style="color: #38bdf8; border-color: rgba(31,138,203,0.4);">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="contact-method-text">
+                                        <span class="label">Codeforces</span>
+                                        <span class="value">AryanMoorthy (1180)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" action="https://formspree.io/f/xnngvpbe" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Alex Morgan" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. alex@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell me about your opportunity, question, or message..." required></textarea>
+                            </div>
+
+                            <div id="formStatus" class="form-status"></div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo-mark">AM</span>
+                        <span class="logo-text">Aryan<span class="text-gradient">.dev</span></span>
+                    </a>
+                    <p>CS & AI Student @ SST & BITS Pilani ’29. Competitive Programmer | ICPC Regionals Cohort @ NlogN CP Club.</p>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://codeforces.com/profile/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="btn-icon" title="Codeforces">
+                        <i class="fas fa-chart-line"></i>
+                    </a>
+                    <a href="https://www.codechef.com/users/aryan_moorthy" target="_blank" rel="noopener noreferrer" class="btn-icon" title="CodeChef">
+                        <i class="fas fa-star"></i>
+                    </a>
+                    <a href="https://atcoder.jp/users/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="btn-icon" title="AtCoder">
+                        <i class="fas fa-trophy"></i>
+                    </a>
+                    <a href="https://github.com/AryanMoorthy" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aryan-m-7907201b7/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:aryanxmoorthy@gmail.com" class="btn-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Aryan Moorthy. All rights reserved.</span>
+                <span>
+                    <a href="assets/docs/Resume.pdf" target="_blank" style="color: var(--cyan); text-decoration: underline;">
+                        <i class="fas fa-file-pdf"></i> Download Resume PDF
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Application Bundle (Supports both file:// and http/https environments) -->
+    <script src="js/bundle.js" defer></script>
 </body>
 
 </html>
