@@ -2,6 +2,9 @@
 
 A modern, responsive, high-performance modular portfolio website showcasing Competitive Programming metrics, combined 52-week activity heatmap, academic journey, technical skills, and resume.
 
+## 🌐 Live Site
+**[https://aryanmoorthy.github.io/Portfolio](https://aryanmoorthy.github.io/Portfolio)**
+
 ## ✨ Features
 - **Competitive Programming Showcase:** Live-cached stats cards for **Codeforces** (Rating 1180, 900+ solved), **CodeChef** (2★, peak 1511), and **AtCoder** (7 Kyu, top 23.82% global).
 - **Interactive Coding Activity Heatmap:** 52-week calendar heatmap merging solves from Codeforces and AtCoder with local timezone grouping, 24-hour caching, and interactive hover popups showing problem names, platform badges, difficulty ratings, and direct problem links.
@@ -18,13 +21,15 @@ Portfolio/
 ├── index.html                   # Root entry point for static hosting (GitHub Pages, Vercel, Netlify)
 ├── README.md
 ├── assets/
-│   ├── images/                  # Media assets (profile portrait, favicon, background graphics)
-│   │   ├── favicon.png
-│   │   ├── pp.png
-│   │   ├── grids.png
-│   │   ├── BG2.jpg
-│   │   ├── BG3.jpg
-│   │   └── Recipee.png
+│   ├── images/                  # Media assets (profile portrait, favicon icons)
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   └── pp.png
 │   └── docs/                    # Documents & PDF files
 │       └── Resume.pdf
 ├── css/
