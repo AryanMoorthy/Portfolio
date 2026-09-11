@@ -10,6 +10,7 @@ export function initTypingEffect() {
         'CS & AI Undergrad @ Scaler School of Tech & BITS Pilani',
         'Competitive Programmer | 900+ Problems Solved',
         'ICPC Regionals Cohort @ NlogN CP Club',
+        'Fitness & Gym Enthusiast | Strength & Daily Discipline',
         'Codeforces 1180 | CodeChef 2★ | AtCoder 7 Kyu',
     ];
     let li = 0, ci = 0;
