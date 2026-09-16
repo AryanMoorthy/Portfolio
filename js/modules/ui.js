@@ -8,10 +8,10 @@ export function initTypingEffect() {
 
     const lines = [
         'CS & AI Undergrad @ Scaler School of Tech & BITS Pilani',
-        'Competitive Programmer | 900+ Problems Solved',
+        'Competitive Programmer | 850+ Problems Solved',
         'ICPC Regionals Cohort @ NlogN CP Club',
         'Fitness & Gym Enthusiast | Strength & Daily Discipline',
-        'Codeforces 1180 | CodeChef 2★ | AtCoder 7 Kyu',
+        'Codeforces 1171 | CodeChef 1404 (2★) | AtCoder 721 (7 Kyu)',
     ];
     let li = 0, ci = 0;
 
